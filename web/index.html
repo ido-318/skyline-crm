@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Skyline CRM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Skyline CRM</h1>
+    <p class="subtitle">Classroom demo &mdash; customers, flights, and bookings</p>
+  </header>
+
+  <main>
+    <section class="panel" id="booking-form-panel">
+      <h2>New Booking</h2>
+      <form id="booking-form">
+        <label for="customer-select">Customer</label>
+        <select id="customer-select" required></select>
+
+        <label for="flight-select">Flight</label>
+        <select id="flight-select" required></select>
+
+        <button type="submit" id="booking-submit" disabled>Book Flight</button>
+        <p id="booking-status" role="status">Loading customers and flights…</p>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Bookings</h2>
+      <p class="panel-status" id="bookings-status" role="status">Loading…</p>
+      <table id="bookings-table" hidden>
+        <thead>
+          <tr><th>Booking #</th><th>Customer</th><th>Flight</th><th>Departs</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Customers</h2>
+      <p class="panel-status" id="customers-status" role="status">Loading…</p>
+      <table id="customers-table" hidden>
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Email</th><th>Passport</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Flights</h2>
+      <p class="panel-status" id="flights-status" role="status">Loading…</p>
+      <table id="flights-table" hidden>
+        <thead>
+          <tr><th>ID</th><th>Destination</th><th>Departs</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
